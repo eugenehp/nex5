@@ -1,14 +1,15 @@
 [package]
 name = "nex5file-py"
-version = "1.1.0"
+version = "1.2.0"
 edition = "2021"
 description = "Python bindings for nex5file"
 license = "MIT"
+publish = false
 
 [lib]
 name = "nex5file_py"
 crate-type = ["cdylib"]
 
 [dependencies]
-nex5file = { path = "..", features = ["std"] }
+nex5file = { version = "1.2.0", path = "..", features = ["std"] }
 pyo3 = { version = "0.23", features = ["extension-module"] }

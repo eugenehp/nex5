@@ -2,12 +2,11 @@
 
 Convert MED64 `.modat` spike detection output into [`nex5file`](../) sessions.
 
-Depends on [`med64`](https://crates.io/crates/med64) `0.0.2` from crates.io.
+Depends on [`med64`](https://crates.io/crates/med64) `0.0.2` and [`nex5file`](https://crates.io/crates/nex5file) `1.2` from crates.io.
 
 ```toml
 [dependencies]
-nex5-med64 = { path = "nex5-med64" }
-# or, once published: nex5-med64 = "0.1"
+nex5-med64 = "1.2"
 ```
 
 ```rust

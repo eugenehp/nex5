@@ -1,11 +1,15 @@
 [package]
 name = "nex5-med64"
-version = "0.1.0"
+version = "1.2.0"
 edition = "2021"
 rust-version = "1.74"
 description = "Convert MED64 .modat spike trains to nex5 .nex5 files"
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/NeuroExplorer/nex5file"
+documentation = "https://docs.rs/nex5-med64"
+keywords = ["med64", "nex5", "neuroscience", "electrophysiology", "mea"]
+categories = ["science", "parser-implementations"]
 
 [lib]
 name = "nex5_med64"
@@ -13,7 +17,7 @@ path = "src/lib.rs"
 
 [dependencies]
 med64 = "0.0.2"
-nex5file = { path = ".." }
+nex5file = { version = "1.2.0", path = ".." }
 
 [dev-dependencies]
 tempfile = "3.14"

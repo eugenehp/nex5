@@ -4,7 +4,7 @@ resolver = "2"
 
 [package]
 name = "nex5file"
-version = "1.1.0"
+version = "1.2.0"
 edition = "2021"
 rust-version = "1.74"
 description = "Read and write NeuroExplorer .nex and .nex5 files"
@@ -14,7 +14,16 @@ categories = ["science", "parser-implementations"]
 readme = "README.md"
 repository = "https://github.com/NeuroExplorer/nex5file"
 documentation = "https://docs.rs/nex5file"
-exclude = ["/target", "/.github", "/nex5file-py"]
+exclude = [
+    "/target",
+    "/.github",
+    "/nex5file-py",
+    "/nex5-nwb",
+    "/nex5-analyze",
+    "/nex5-cli",
+    "/nex5-med64",
+    "/nex5-sort",
+]
 
 [features]
 default = ["std"]

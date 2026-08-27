@@ -1,6 +1,6 @@
 [package]
 name = "nex5-analyze"
-version = "0.1.0"
+version = "1.2.0"
 edition = "2021"
 rust-version = "1.74"
 description = "Spike-train analysis utilities for nex5file (PSTH, filtering, ISI)"
@@ -9,9 +9,10 @@ keywords = ["NeuroExplorer", "nex5", "PSTH", "spike", "neuroscience"]
 categories = ["science"]
 readme = "README.md"
 repository = "https://github.com/NeuroExplorer/nex5file"
+documentation = "https://docs.rs/nex5-analyze"
 
 [dependencies]
-nex5file = { path = ".." }
+nex5file = { version = "1.2.0", path = ".." }
 
 [dev-dependencies]
 approx = "0.5"

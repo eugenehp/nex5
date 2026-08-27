@@ -38,7 +38,7 @@ See [`docs/format.md`](docs/format.md) for a binary format reference.
 
 ```toml
 [dependencies]
-nex5file = "1.0"
+nex5file = "1.2"
 ```
 
 Or from this repository:
@@ -130,21 +130,26 @@ let writer = Writer::with_options(
 
 ## Workspace crates
 
-| Crate | Role |
-|-------|------|
-| **`nex5file`** (this crate) | Read/write `.nex` / `.nex5` |
-| **[`nex5-nwb`](nex5-nwb/)** | Convert `FileData` ↔ NWB 2.x (Units, TimeSeries) |
-| **[`nex5-analyze`](nex5-analyze/)** | PSTH, filtering, ISI, raster, cross-correlation |
-| **[`nex5-sort`](nex5-sort/)** | Kilosort-style sorting + Phy/Kilosort `.npy` I/O |
-| **[`nex5-cli`](nex5-cli/)** | `nex5` command: info, export, NWB convert, sort, PSTH |
-| **[`nex5-med64`](nex5-med64/)** | MED64 `.modat` → `.nex5` converter |
-
-NWB I/O uses [`consus-nwb`](https://crates.io/crates/consus-nwb) (pure Rust HDF5). Analysis stays separate so embedded/`no_std` builds are unaffected.
+| Crate | crates.io | Role |
+|-------|-----------|------|
+| **[`nex5file`](https://crates.io/crates/nex5file)** | `1.2` | Read/write `.nex` / `.nex5` |
+| **[`nex5-nwb`](https://crates.io/crates/nex5-nwb)** | `1.2` | Convert `FileData` ↔ NWB 2.x |
+| **[`nex5-analyze`](https://crates.io/crates/nex5-analyze)** | `1.2` | PSTH, filtering, ISI, raster, cross-correlation |
+| **[`nex5-sort`](https://crates.io/crates/nex5-sort)** | `1.2` | Kilosort-style sorting + Phy/Kilosort `.npy` I/O |
+| **[`nex5-med64`](https://crates.io/crates/nex5-med64)** | `1.2` | MED64 `.modat` → `.nex5` |
+| **[`nex5-cli`](https://crates.io/crates/nex5-cli)** | `1.2` | `nex5` command: info, export, NWB, sort, PSTH |
 
 ```toml
 # Cargo.toml
-nex5-nwb = { path = "nex5-nwb" }
-nex5-analyze = { path = "nex5-analyze" }
+nex5file = "1.2"
+nex5-nwb = "1.2"
+nex5-analyze = "1.2"
+nex5-sort = "1.2"
+nex5-med64 = "1.2"
+```
+
+```bash
+cargo install nex5-cli
 ```
 
 ```rust
