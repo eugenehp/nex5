@@ -769,6 +769,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "nex5"
+version = "1.2.0"
+dependencies = [
+ "nex5-analyze",
+ "nex5-med64",
+ "nex5-nwb",
+ "nex5-sort",
+ "nex5file",
+ "tempfile",
+]
+
+[[package]]
 name = "nex5-analyze"
 version = "1.2.0"
 dependencies = [

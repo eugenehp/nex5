@@ -1,5 +1,5 @@
 [workspace]
-members = [".", "nex5-nwb", "nex5-analyze", "nex5-cli", "nex5-med64", "nex5-sort"]
+members = [".", "nex5", "nex5-nwb", "nex5-analyze", "nex5-cli", "nex5-med64", "nex5-sort"]
 resolver = "2"
 
 [package]
@@ -17,6 +17,7 @@ documentation = "https://docs.rs/nex5file"
 exclude = [
     "/target",
     "/.github",
+    "/nex5",
     "/nex5file-py",
     "/nex5-nwb",
     "/nex5-analyze",

@@ -132,6 +132,7 @@ let writer = Writer::with_options(
 
 | Crate | crates.io | Role |
 |-------|-----------|------|
+| **[`nex5`](https://crates.io/crates/nex5)** | `1.2` | Umbrella crate + prelude (feature-gated siblings) |
 | **[`nex5file`](https://crates.io/crates/nex5file)** | `1.2` | Read/write `.nex` / `.nex5` |
 | **[`nex5-nwb`](https://crates.io/crates/nex5-nwb)** | `1.2` | Convert `FileData` ↔ NWB 2.x |
 | **[`nex5-analyze`](https://crates.io/crates/nex5-analyze)** | `1.2` | PSTH, filtering, ISI, raster, cross-correlation |
@@ -141,6 +142,8 @@ let writer = Writer::with_options(
 
 ```toml
 # Cargo.toml
+nex5 = { version = "1.2", features = ["full"] }
+# or pick crates individually:
 nex5file = "1.2"
 nex5-nwb = "1.2"
 nex5-analyze = "1.2"

@@ -33,6 +33,7 @@ All notable changes to this project are documented in this file.
 - **`nex5-med64`** depends on [`med64`](https://crates.io/crates/med64) `0.0.2` from crates.io (no longer a local path)
 - Workspace crates use versioned path deps (`nex5file = { version = "1.2.0", path = ".." }`) so they can be published to crates.io
 - All workspace crates aligned at **1.2.0**
+- **`nex5`** umbrella crate — prelude + feature flags for `analyze` / `nwb` / `sort` / `med64` / `full`
 
 ### Added (workspace)
 
