@@ -1,6 +1,6 @@
 //! Convert MED64 analysis output to [`nex5file::FileData`].
 //!
-//! Requires the sibling [`med64`](../../med64/rust/med64) crate and real `.modat` data.
+//! Depends on [`med64`](https://crates.io/crates/med64) from crates.io.
 
 use med64::{run_analysis, AnalysisOptions};
 use nex5file::FileData;

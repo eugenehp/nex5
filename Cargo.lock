@@ -714,7 +714,9 @@ dependencies = [
 
 [[package]]
 name = "med64"
-version = "0.0.1"
+version = "0.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8b091e45629ae9478ff522af6eb6876076cc7ba4d6021e7dfaff46275111736c"
 dependencies = [
  "byteorder",
  "chrono",

@@ -7,7 +7,10 @@ pub fn fixtures_dir() -> PathBuf {
     PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures")
 }
 
-/// Sibling MED64 data directory (`../med64/data` from this repo).
+/// Optional sibling MED64 sample-data directory (`../med64/data`), if checked out locally.
+///
+/// The [`med64`](https://crates.io/crates/med64) crate on crates.io does not ship recordings;
+/// integration tests skip when this path is missing.
 pub fn med64_data_dir() -> PathBuf {
     PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../med64/data")
 }

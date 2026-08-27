@@ -12,7 +12,7 @@ name = "nex5_med64"
 path = "src/lib.rs"
 
 [dependencies]
-med64 = { path = "../../med64/rust/med64", default-features = true }
+med64 = "0.0.2"
 nex5file = { path = ".." }
 
 [dev-dependencies]

@@ -30,6 +30,7 @@ All notable changes to this project are documented in this file.
 
 - Spike/event/marker/waveform timestamps use [`Timestamps`](src/variables/timestamps.rs) (API: `.as_f64_vec()`, `PartialEq` with `Vec<f64>`)
 - Criterion bench clippy fix
+- **`nex5-med64`** depends on [`med64`](https://crates.io/crates/med64) `0.0.2` from crates.io (no longer a local path)
 
 ### Added (workspace)
 
