@@ -48,5 +48,5 @@ pub use nex5_sort as sort;
 #[cfg_attr(docsrs, doc(cfg(feature = "med64")))]
 pub use nex5_med64 as med64;
 
-/// Crate version string (`1.2.0`).
+/// Crate version string (`1.2.1`).
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");

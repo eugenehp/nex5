@@ -770,7 +770,7 @@ dependencies = [
 
 [[package]]
 name = "nex5"
-version = "1.2.0"
+version = "1.2.1"
 dependencies = [
  "nex5-analyze",
  "nex5-med64",
@@ -782,7 +782,7 @@ dependencies = [
 
 [[package]]
 name = "nex5-analyze"
-version = "1.2.0"
+version = "1.2.1"
 dependencies = [
  "approx",
  "nex5file",
@@ -790,7 +790,7 @@ dependencies = [
 
 [[package]]
 name = "nex5-cli"
-version = "1.2.0"
+version = "1.2.1"
 dependencies = [
  "clap",
  "nex5-analyze",
@@ -801,7 +801,7 @@ dependencies = [
 
 [[package]]
 name = "nex5-med64"
-version = "1.2.0"
+version = "1.2.1"
 dependencies = [
  "med64",
  "nex5file",
@@ -810,7 +810,7 @@ dependencies = [
 
 [[package]]
 name = "nex5-nwb"
-version = "1.2.0"
+version = "1.2.1"
 dependencies = [
  "consus-core",
  "consus-nwb",
@@ -823,7 +823,7 @@ dependencies = [
 
 [[package]]
 name = "nex5-sort"
-version = "1.2.0"
+version = "1.2.1"
 dependencies = [
  "nex5file",
  "tempfile",
@@ -832,7 +832,7 @@ dependencies = [
 
 [[package]]
 name = "nex5file"
-version = "1.2.0"
+version = "1.2.1"
 dependencies = [
  "approx",
  "criterion",

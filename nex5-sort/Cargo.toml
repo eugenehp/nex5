@@ -1,12 +1,12 @@
 [package]
 name = "nex5-sort"
-version = "1.2.0"
+version = "1.2.1"
 edition = "2021"
 rust-version = "1.74"
 description = "Kilosort-style spike sorting pipeline and Phy/Kilosort export I/O for nex5file"
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/NeuroExplorer/nex5file"
+repository = "https://github.com/eugenehp/nex5"
 documentation = "https://docs.rs/nex5-sort"
 keywords = ["kilosort", "phy", "spike-sorting", "nex5", "neuroscience"]
 categories = ["science"]
@@ -16,7 +16,7 @@ name = "nex5_sort"
 path = "src/lib.rs"
 
 [dependencies]
-nex5file = { version = "1.2.0", path = ".." }
+nex5file = { version = "1.2.1", path = ".." }
 thiserror = "2.0"
 
 [dev-dependencies]

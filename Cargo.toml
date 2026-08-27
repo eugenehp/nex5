@@ -4,7 +4,7 @@ resolver = "2"
 
 [package]
 name = "nex5file"
-version = "1.2.0"
+version = "1.2.1"
 edition = "2021"
 rust-version = "1.74"
 description = "Read and write NeuroExplorer .nex and .nex5 files"
@@ -12,7 +12,7 @@ license = "MIT"
 keywords = ["NeuroExplorer", "nex", "nex5", "neuroscience", "electrophysiology"]
 categories = ["science", "parser-implementations"]
 readme = "README.md"
-repository = "https://github.com/NeuroExplorer/nex5file"
+repository = "https://github.com/eugenehp/nex5"
 documentation = "https://docs.rs/nex5file"
 exclude = [
     "/target",

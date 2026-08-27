@@ -4,7 +4,7 @@ use nex5::prelude::*;
 fn core_prelude_builds_file_data() {
     let data = FileData::new(40_000.0, "umbrella").unwrap();
     assert!(data.variables.is_empty());
-    assert_eq!(nex5::VERSION, "1.2.0");
+    assert_eq!(nex5::VERSION, "1.2.1");
 }
 
 #[cfg(feature = "analyze")]

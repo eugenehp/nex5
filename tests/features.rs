@@ -94,7 +94,7 @@ fn export_spikes_csv() {
 fn metadata_typed_accessors() {
     let mut data = FileData::new(100_000.0, "").unwrap();
     data.metadata = serde_json::json!({
-        "file": { "writerSoftware": { "name": "nex5file", "version": "1.2.0" } },
+        "file": { "writerSoftware": { "name": "nex5file", "version": "1.2.1" } },
         "variables": [{ "name": "unit_a", "unitNumber": 3 }]
     });
     let meta = data.file_metadata();
