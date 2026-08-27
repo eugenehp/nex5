@@ -1,0 +1,22 @@
+[package]
+name = "nex5-cli"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Command-line tool for nex5file, NWB conversion, and analysis"
+license = "MIT"
+readme = "README.md"
+
+[[bin]]
+name = "nex5"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+nex5-analyze = { path = "../nex5-analyze" }
+nex5-nwb = { path = "../nex5-nwb" }
+nex5-sort = { path = "../nex5-sort" }
+nex5file = { path = ".." }
+
+[features]
+default = []

@@ -1,0 +1,23 @@
+[package]
+name = "nex5-sort"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Kilosort-style spike sorting pipeline and Phy/Kilosort export I/O for nex5file"
+license = "MIT"
+readme = "README.md"
+
+[lib]
+name = "nex5_sort"
+path = "src/lib.rs"
+
+[dependencies]
+nex5file = { path = ".." }
+thiserror = "2.0"
+
+[dev-dependencies]
+tempfile = "3.14"
+
+[[test]]
+name = "pipeline"
+path = "tests/pipeline.rs"

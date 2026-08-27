@@ -1,0 +1,23 @@
+[package]
+name = "nex5-med64"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Convert MED64 .modat spike trains to nex5 .nex5 files"
+license = "MIT"
+readme = "README.md"
+
+[lib]
+name = "nex5_med64"
+path = "src/lib.rs"
+
+[dependencies]
+med64 = { path = "../../med64/rust/med64", default-features = true }
+nex5file = { path = ".." }
+
+[dev-dependencies]
+tempfile = "3.14"
+
+[[test]]
+name = "convert"
+path = "tests/convert.rs"

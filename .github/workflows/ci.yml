@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: Format
+        run: cargo fmt --all -- --check
+      - name: Clippy
+        run: cargo clippy --all-targets -- -D warnings
+      - name: Clippy (no_std)
+        run: cargo clippy --no-default-features --features no_std --lib --test no_std -- -D warnings
+      - name: Test
+        run: cargo test --all-targets
+      - name: Test (no_std)
+        run: cargo test --no-default-features --features no_std --test no_std
+      - name: Test (features)
+        run: cargo test --features full --test features
+      - name: Test (workspace crates)
+        run: cargo test -p nex5-nwb -p nex5-analyze -p nex5-med64 -p nex5-sort
+      - name: Test (extended)
+        run: cargo test --test extended
+      - name: Build CLI
+        run: cargo build -p nex5-cli
+      - name: Clippy (full)
+        run: cargo clippy --features full --lib -- -D warnings
