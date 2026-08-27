@@ -1,0 +1,42 @@
+[package]
+name = "nex5"
+version = "1.2.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Unified NeuroExplorer .nex/.nex5 toolkit: I/O, analysis, NWB, sorting, and MED64"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/NeuroExplorer/nex5file"
+documentation = "https://docs.rs/nex5"
+keywords = ["NeuroExplorer", "nex5", "neuroscience", "electrophysiology", "NWB"]
+categories = ["science", "parser-implementations"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+default = ["std"]
+std = ["nex5file/std"]
+# Optional nex5file performance features
+async = ["nex5file/async"]
+mmap = ["nex5file/mmap"]
+parallel = ["nex5file/parallel"]
+file-full = ["nex5file/full"]
+# Sibling library crates
+analyze = ["dep:nex5-analyze"]
+nwb = ["dep:nex5-nwb"]
+sort = ["dep:nex5-sort"]
+med64 = ["dep:nex5-med64"]
+# Everything (libraries + nex5file full)
+full = ["file-full", "analyze", "nwb", "sort", "med64"]
+
+[dependencies]
+nex5file = { version = "1.2.0", path = "..", default-features = false }
+nex5-analyze = { version = "1.2.0", path = "../nex5-analyze", optional = true }
+nex5-nwb = { version = "1.2.0", path = "../nex5-nwb", optional = true }
+nex5-sort = { version = "1.2.0", path = "../nex5-sort", optional = true }
+nex5-med64 = { version = "1.2.0", path = "../nex5-med64", optional = true }
+
+[dev-dependencies]
+tempfile = "3.14"
